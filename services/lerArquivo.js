@@ -5,6 +5,6 @@ export async function lerArquivo() {
     const arquivoText = await readFile("./data/database.json", {encoding: 'utf-8'});
     return JSON.parse(arquivoText);
   } catch (error) {
-    console.error("Arquivo corrompido, não foi possível ler os dados")
+    console.error("Arquivo corrompido ou vazio, não foi possível ler os dados")
   }
 }
