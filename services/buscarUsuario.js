@@ -7,9 +7,9 @@ export async function buscarUsuario(username) {
     
     if(!resposta.ok) throw new Error("Falha na busca de usuário");
     
+    console.log(`Username: ${dados.login}\nNome: ${dados.name}`)
     return dados;
   } catch (error) {
     console.log("Falha pela busca de usuários na API do Github")
   }
-  
 }
