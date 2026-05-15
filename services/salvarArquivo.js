@@ -9,10 +9,6 @@ export async function salvarArquivo(usuario) {
     return;
   }
 
-  if(!usuarios){
-    await writeFile("./data/database.json", JSON.stringify([usuarios]), {encoding: "utf-8"})
-  }  
-
   usuarios.push(usuario);
 
   try {
