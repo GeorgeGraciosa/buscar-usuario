@@ -1,6 +1,5 @@
 import { stdin, stdout } from "process"; 
 import { createInterface } from 'node:readline/promises'
-import { readFile, writeFile } from 'node:fs/promises';
 import { buscarUsuario } from '../services/buscarUsuario.js';
 
 async function main(){
