@@ -10,7 +10,12 @@ async function main(){
 
   const usuario = await buscarUsuario(respostaConsole);
 
-  const desejaSalvar = await interfaceConsole.question("Deseja salvar o usuário na database? ")
+  if(usuario === null || usuario === undefined) {
+    console.error("Digite um usuário válido");
+    interfaceConsole.close();
+  }
+
+  const desejaSalvar = await interfaceConsole.question("Deseja salvar o usuário na database?\n(s/n) ")
 
   if(desejaSalvar.toLowerCase().trim() === 'sim' || desejaSalvar.toLowerCase().trim() === 's'){
     await salvarArquivo(usuario);
